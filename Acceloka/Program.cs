@@ -14,10 +14,22 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddEntityFrameworkSqlServer();
+
 builder.Services.AddDbContextPool<AccelokaContext>(options =>
 {
     var conString = configuration.GetConnectionString("DefaultConfiguration");
     options.UseSqlServer(conString);
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        policy =>
+        {
+            policy.AllowAnyOrigin() 
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
 });
 
 builder.Services.AddTransient<TicketService>();
@@ -37,6 +49,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 
