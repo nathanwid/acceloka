@@ -2,7 +2,6 @@ using Acceloka.Behaviors;
 using Acceloka.Entities;
 using Acceloka.Exceptions;
 using Acceloka.Repositories;
-using Acceloka.Services;
 using Acceloka.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -47,9 +46,6 @@ builder.Services.AddCors(options =>
                   .AllowAnyHeader();
         });
 });
-
-builder.Services.AddTransient<TicketService>();
-builder.Services.AddTransient<BookedTicketService>();
 
 builder.Services.AddScoped<TicketRepository>();
 builder.Services.AddScoped<BookedTicketRepository>();

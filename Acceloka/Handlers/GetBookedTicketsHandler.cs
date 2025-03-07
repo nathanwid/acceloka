@@ -2,7 +2,6 @@
 using Acceloka.Entities;
 using Acceloka.Models.Responses;
 using Acceloka.Repositories;
-using Acceloka.Services;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

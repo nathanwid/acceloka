@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|c:\\users\\nathan widjaja\\source\\repos\\acceloka\\acceloka\\handlers\\generateexcelreporthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|solutionrelative:acceloka\\handlers\\generateexcelreporthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|c:\\users\\nathan widjaja\\source\\repos\\acceloka\\acceloka\\logs\\log-20250307.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|solutionrelative:acceloka\\logs\\log-20250307.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|c:\\users\\nathan widjaja\\source\\repos\\acceloka\\acceloka\\repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|solutionrelative:acceloka\\repositories\\ticketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|c:\\users\\nathan widjaja\\source\\repos\\acceloka\\acceloka\\handlers\\getavailableticketshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1132136-F5DF-4959-BCFB-DA973B4A0C09}|Acceloka\\Acceloka.csproj|solutionrelative:acceloka\\handlers\\getavailableticketshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GenerateExcelReportHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\Handlers\\GenerateExcelReportHandler.cs",
-              "RelativeDocumentMoniker": "Acceloka\\Handlers\\GenerateExcelReportHandler.cs",
-              "ToolTip": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\Handlers\\GenerateExcelReportHandler.cs",
-              "RelativeToolTip": "Acceloka\\Handlers\\GenerateExcelReportHandler.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowBwAAABBAAAAAAAAAA==",
+              "Title": "Log-20250307.txt",
+              "DocumentMoniker": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\logs\\Log-20250307.txt",
+              "RelativeDocumentMoniker": "Acceloka\\logs\\Log-20250307.txt",
+              "ToolTip": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\logs\\Log-20250307.txt",
+              "RelativeToolTip": "Acceloka\\logs\\Log-20250307.txt",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAALUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-03-07T09:41:36.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\Repositories\\TicketRepository.cs",
+              "RelativeDocumentMoniker": "Acceloka\\Repositories\\TicketRepository.cs",
+              "ToolTip": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\Repositories\\TicketRepository.cs",
+              "RelativeToolTip": "Acceloka\\Repositories\\TicketRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:19:34.709Z",
+              "WhenOpened": "2025-03-07T09:34:30.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetAvailableTicketsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\Handlers\\GetAvailableTicketsHandler.cs",
+              "RelativeDocumentMoniker": "Acceloka\\Handlers\\GetAvailableTicketsHandler.cs",
+              "ToolTip": "C:\\Users\\Nathan Widjaja\\source\\repos\\Acceloka\\Acceloka\\Handlers\\GetAvailableTicketsHandler.cs",
+              "RelativeToolTip": "Acceloka\\Handlers\\GetAvailableTicketsHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T09:34:20.471Z",
               "EditorCaption": ""
             }
           ]
