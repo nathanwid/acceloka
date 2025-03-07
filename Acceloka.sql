@@ -26,7 +26,7 @@ CREATE TABLE Ticket(
 	Date DATETIME NOT NULL,
 
 	CategoryId INT NOT NULL 
-	CONSTRAINT FK_Ticket_Category FOREIGN KEY REFERENCES Category(Id),
+	CONSTRAINT FK_Ticket_Category FOREIGN KEY REFERENCES Category(Id) ON DELETE CASCADE,
 
 	CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
 	CreatedBy VARCHAR(255) NOT NULL DEFAULT 'SYSTEM',
@@ -53,10 +53,10 @@ CREATE TABLE Detail(
 	Quantity INT NOT NULL,
 
 	TicketCode VARCHAR(50) NOT NULL 
-	CONSTRAINT FK_Detail_Ticket FOREIGN KEY REFERENCES Ticket(Code),
+	CONSTRAINT FK_Detail_Ticket FOREIGN KEY REFERENCES Ticket(Code) ON DELETE CASCADE,
 
 	BookedTicketId INT NOT NULL
-	CONSTRAINT FK_Detail_BookedTicket FOREIGN KEY REFERENCES BookedTicket(Id),
+	CONSTRAINT FK_Detail_BookedTicket FOREIGN KEY REFERENCES BookedTicket(Id) ON DELETE CASCADE,
 
 	CreatedAt DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(),
 	CreatedBy VARCHAR(255) NOT NULL DEFAULT 'SYSTEM',
@@ -81,46 +81,55 @@ INSERT INTO Ticket (Code, Name, Price, Quota, Date, CategoryId) VALUES
 ('TD002', 'Kereta Eksekutif Jakarta-Surabaya', 700000, 90, '2025-06-15 08:00:00', 1),
 ('TD003', 'Bus Malang-Bandung', 600000, 85, '2025-07-20 14:30:00', 1),
 ('TD004', 'Bus Jakarta-Bali', 600000, 90, '2025-08-05 14:00:00', 1),
+('TD005', 'Bus Bandung-Yogyakarta', 550000, 85, '2025-01-10 08:00:00', 1),
 
 -- Transportasi Laut
 ('TL001', 'Kapal Feri Jawa-Sumatra', 250000, 70, '2025-05-20 13:00:00', 2),
 ('TL002', 'Pelni Jakarta-Makassar', 450000, 100, '2025-06-25 18:00:00', 2),
 ('TL003', 'Kapal Pesiar Bali-Komodo', 2000000, 60, '2025-07-30 09:00:00', 2),
 ('TL004', 'Speedboat Labuan Bajo-Komodo', 750000, 55, '2025-09-15 07:30:00', 2),
+('TL005', 'Kapal Feri Bali-Lombok', 300000, 80, '2025-01-15 13:30:00', 2),
 
 -- Cinema
 ('C001', 'Ironman CGV', 75000, 99, '2025-05-15 20:00:00', 3),
 ('C002', 'Batman IMAX', 100000, 95, '2025-06-18 21:30:00', 3),
 ('C003', 'Avatar 3 XXI', 95000, 90, '2025-07-22 19:45:00', 3),
 ('C004', 'John Wick IMAX', 110000, 98, '2025-08-15 19:00:00', 3),
+('C005', 'Spiderman No Way Home XXI', 90000, 95, '2025-01-20 19:00:00', 3),
 
 -- Hotel
 ('H001', 'Ibis Hotel Jakarta 21-23', 1500000, 76, '2025-05-12 12:00:00', 4),
 ('H002', 'Grand Hyatt Bali', 2500000, 50, '2025-06-14 15:00:00', 4),
 ('H003', 'The Ritz-Carlton Jakarta', 3500000, 40, '2025-07-16 11:00:00', 4),
 ('H004', 'Aston Hotel Medan', 1800000, 60, '2025-09-08 14:00:00', 4),
+('H005', 'Santika Hotel Yogyakarta', 1600000, 70, '2025-01-25 14:00:00', 4),
 
 -- Konser Musik
 ('M001', 'Festival Musik Nusantara', 300000, 1000, '2025-05-25 18:30:00', 5),
 ('M002', 'Rock Fest 2025', 350000, 1200, '2025-06-28 20:00:00', 5),
 ('M003', 'Konser Jazz Malam', 320000, 800, '2025-07-30 21:00:00', 5),
+('M004', 'Indie Music Night', 280000, 900, '2025-01-12 20:00:00', 5),
 
 -- Seminar & Workshop
 ('S001', 'Seminar Bisnis Digital', 200000, 300, '2025-05-05 09:30:00', 6),
 ('S002', 'Workshop Coding Pemula', 250000, 200, '2025-06-07 10:00:00', 6),
 ('S003', 'Pelatihan UI/UX Design', 220000, 180, '2025-08-15 09:00:00', 6),
+('S004', 'Pelatihan Data Science', 300000, 250, '2025-01-18 09:00:00', 6),
 
 -- Festival Budaya
 ('F001', 'Festival Batik Nasional', 50000, 1000, '2025-07-20 10:00:00', 7),
 ('F002', 'Pawai Budaya Nusantara', 75000, 800, '2025-08-10 14:00:00', 7),
 ('F003', 'Pentas Tari Tradisional', 60000, 700, '2025-09-18 19:00:00', 7),
+('F004', 'Festival Kuliner Nusantara', 70000, 1200, '2025-01-30 11:00:00', 7),
 
 -- Olahraga
 ('O001', 'Final Sepak Bola', 600000, 500, '2025-05-10 17:00:00', 8),
 ('O002', 'Kejuaraan Bulu Tangkis', 450000, 400, '2025-06-12 16:30:00', 8),
 ('O003', 'Marathon Kota 2025', 300000, 700, '2025-07-18 06:00:00', 8),
+('O004', 'Turnamen Tenis Meja', 200000, 300, '2025-01-22 15:00:00', 8),
 
 -- Pameran & Expo
 ('P001', 'Pameran Teknologi 2025', 250000, 800, '2025-05-20 10:00:00', 9),
 ('P002', 'Pameran Startup Digital', 300000, 700, '2025-06-22 11:00:00', 9),
-('P003', 'Expo Fashion & Beauty', 220000, 900, '2025-07-25 09:30:00', 9);
+('P003', 'Expo Fashion & Beauty', 220000, 900, '2025-07-25 09:30:00', 9),
+('P004', 'Pameran Otomotif 2025', 350000, 750, '2025-01-27 10:00:00', 9);

@@ -12,3 +12,4 @@ C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka.Entities\obj\Debug\net8.0
 C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka.Entities\obj\Debug\net8.0\Acceloka.Entities.pdb
 C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka.Entities\obj\Debug\net8.0\Acceloka.Entities.genruntimeconfig.cache
 C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka.Entities\obj\Debug\net8.0\ref\Acceloka.Entities.dll
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka.Entities\obj\Debug\net8.0\Acceloka.Entities.sourcelink.json

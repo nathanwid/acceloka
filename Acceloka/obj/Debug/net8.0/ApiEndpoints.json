@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Acceloka.Models.BookedTicketModel",
+        "Type": "Acceloka.Models.Requests.BookedTicketModel",
         "IsRequired": true
       }
     ],
@@ -30,7 +30,7 @@
       },
       {
         "Name": "request",
-        "Type": "Acceloka.Models.BookedTicketModel",
+        "Type": "Acceloka.Models.Requests.BookedTicketModel",
         "IsRequired": true
       }
     ],
@@ -39,11 +39,17 @@
   {
     "ContainingType": "Acceloka.Controllers.BookedTicketController",
     "Method": "GenerateExcelReport",
-    "RelativePath": "api/v1/generate-excel-report",
+    "RelativePath": "api/v1/generate-excel-report/{bookedTicketId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "bookedTicketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -96,7 +102,7 @@
       },
       {
         "Name": "page",
-        "Type": "System.Int32",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],
@@ -116,16 +122,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Acceloka.Controllers.CategoryController",
-    "Method": "GetCategories",
-    "RelativePath": "api/v1/get-category",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -149,22 +145,6 @@
       {
         "Name": "quantity",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Acceloka.Controllers.CategoryController",
-    "Method": "UpdateCategory",
-    "RelativePath": "api/v1/update-category",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Acceloka.Models.CategoryModel",
         "IsRequired": true
       }
     ],

@@ -110,3 +110,9 @@ C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\ExcelNum
 C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\RBush.dll
 C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\obj\Debug\net8.0\Acceloka.sourcelink.json
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\MediatR.dll
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Nathan Widjaja\source\repos\Acceloka\Acceloka\bin\Debug\net8.0\FluentValidation.AspNetCore.dll

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Acceloka.Models
+namespace Acceloka.Models.Requests
 {
     public class BookedTicketModel
     {

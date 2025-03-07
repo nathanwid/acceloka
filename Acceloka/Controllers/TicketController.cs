@@ -1,5 +1,10 @@
-﻿using Acceloka.Services;
+﻿using Acceloka.Commands;
+using Acceloka.Services;
+using Acceloka.Validators;
+using DocumentFormat.OpenXml.Wordprocessing;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -9,11 +14,11 @@ namespace Acceloka.Controllers
     [ApiController]
     public class TicketController : ControllerBase
     {
-        private readonly TicketService _service;
+        private readonly ISender _sender;
 
-        public TicketController(TicketService service)
+        public TicketController(ISender sender)
         {
-            _service = service;
+            _sender = sender;
         }
 
         [HttpGet("get-available-ticket")]
@@ -26,9 +31,12 @@ namespace Acceloka.Controllers
             [FromQuery] DateTime? maxEventDate,
             [FromQuery] string? orderBy,
             [FromQuery] string? orderState,
-            [FromQuery] int page = 1)
+            [FromQuery] int? page)
         {
-            var (tickets, totalTickets) = await _service.GetAvailableTickets(categoryName, ticketCode, ticketName, maxPrice, minEventDate, maxEventDate, orderBy, orderState, page, 10);
+            var command = new GetAvailableTicketsCommand(
+                categoryName, ticketCode, ticketName, maxPrice, minEventDate, maxEventDate, orderBy, orderState, page);
+
+            var (tickets, totalTickets) = await _sender.Send(command);
 
             return Ok(new { tickets, totalTickets });
         }

@@ -85,12 +85,10 @@ public partial class AccelokaContext : DbContext
 
             entity.HasOne(d => d.BookedTicket).WithMany(p => p.Details)
                 .HasForeignKey(d => d.BookedTicketId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Detail_BookedTicket");
 
             entity.HasOne(d => d.Ticket).WithMany(p => p.Details)
                 .HasForeignKey(d => d.TicketCode)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Detail_Ticket");
         });
 
@@ -120,7 +118,6 @@ public partial class AccelokaContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Tickets)
                 .HasForeignKey(d => d.CategoryId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Ticket_Category");
         });
 

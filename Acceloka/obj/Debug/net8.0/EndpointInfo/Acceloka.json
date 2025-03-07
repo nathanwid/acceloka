@@ -28,10 +28,21 @@
         }
       }
     },
-    "/api/v1/generate-excel-report": {
+    "/api/v1/generate-excel-report/{bookedTicketId}": {
       "get": {
         "tags": [
           "BookedTicket"
+        ],
+        "parameters": [
+          {
+            "name": "bookedTicketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -153,49 +164,6 @@
         }
       }
     },
-    "/api/v1/get-category": {
-      "get": {
-        "tags": [
-          "Category"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/v1/update-category": {
-      "put": {
-        "tags": [
-          "Category"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CategoryModel"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CategoryModel"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CategoryModel"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/v1/get-available-ticket": {
       "get": {
         "tags": [
@@ -266,8 +234,7 @@
             "in": "query",
             "schema": {
               "type": "integer",
-              "format": "int32",
-              "default": 1
+              "format": "int32"
             }
           }
         ],
@@ -297,24 +264,6 @@
             "items": {
               "$ref": "#/components/schemas/DetailModel"
             }
-          }
-        },
-        "additionalProperties": false
-      },
-      "CategoryModel": {
-        "required": [
-          "id",
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "minLength": 1,
-            "type": "string"
           }
         },
         "additionalProperties": false
